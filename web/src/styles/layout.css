@@ -1,15 +1,19 @@
-@import './custom-properties.css';
+@import "./custom-properties.css";
+
+* {
+  box-sizing: border-box;
+}
 
 html {
-  font-family: var(--font-family-sans);
+  font-family: var(--font-family-body);
   font-size: var(--font-base-size);
   line-height: var(--font-base-line-height);
 }
 
 body {
   -webkit-font-smoothing: antialiased;
-  background: var(--color-white);
-  color: var(--color-black);
+  background: var(--color-black);
+  color: var(--color-white);
   margin: 0;
 }
 
@@ -18,4 +22,13 @@ body,
 body > div,
 body > div > div {
   height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-family-heading);
 }

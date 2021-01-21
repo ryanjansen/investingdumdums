@@ -36,6 +36,12 @@
     "react-helmet": "^5.2.1"
   },
   "dependencies": {
-    "gatsby-image": "^2.0.41"
+    "@fontsource/halant": "^4.1.0",
+    "@fontsource/space-mono": "^4.1.0",
+    "gatsby-image": "^2.0.41",
+    "gatsby-plugin-sharp": "^2.13.1",
+    "gatsby-source-filesystem": "^2.10.0",
+    "gatsby-transformer-sharp": "^2.11.0",
+    "react-icons": "^4.1.0"
   }
 }

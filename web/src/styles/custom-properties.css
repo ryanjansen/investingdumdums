@@ -1,24 +1,29 @@
-:root {
-  --font-family-sans: -apple-system, BlinkMacSystemFont, sans-serif;
+@import url("https://fonts.googleapis.com/css?family=Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Halant");
 
-  --color-black: #202123;
+:root {
+  --font-family-body: "Halant", sans-serif;
+  --font-family-heading: "Space Mono", Mono;
+
+  --color-black: #02010b;
   --color-dark-gray: #32373e;
   --color-gray: #697a90;
   --color-light-gray: #b4bcc7;
   --color-very-light-gray: #e7ebed;
   --color-white: #fff;
-  --color-accent: #156dff;
+  --color-accent: #7bf75c;
+  --color-accent-dark: #66ce4c;
 
   /* Typography */
   --unit: 16;
-  --font-micro-size: calc(10 / var(--unit) * 1rem); /* 10px */
-  --font-micro-line-height: calc(12 / 10); /* 12px */
+  --font-micro-size: calc(12 / var(--unit) * 1rem); /* 12px */
+  --font-micro-line-height: calc(14 / 10); /* 14px */
   --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
-  --font-small-line-height: calc(21 / 14); /* 21px */
-  --font-base-size: 1em; /* 16px */
+  --font-small-line-height: calc(25 / 14); /* 25px */
+  --font-base-size: calc(18 / var(--unit) * 1rem); /* 18px */
   --font-base-line-height: calc(24 / var(--unit)); /* 24px */
-  --font-large-size: calc(18 / var(--unit) * 1rem); /* 18px */
-  --font-large-line-height: calc(27 / 18); /* 27px */
+  --font-large-size: calc(22 / var(--unit) * 1rem); /* 22px */
+  --font-large-line-height: calc(32 / 18); /* 27px */
 
   --font-title3-size: calc(21 / var(--unit) * 1rem); /* 21px */
   --font-title3-line-height: calc(30 / 21); /* 30px */

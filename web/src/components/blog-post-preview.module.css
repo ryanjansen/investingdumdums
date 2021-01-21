@@ -1,29 +1,37 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   display: block;
   color: inherit;
   text-decoration: none;
+  margin-bottom: 5rem;
 }
 
 .inList {
-  composes: root;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 
   @media (--media-min-medium) {
     display: grid;
+    grid-template-rows: 1fr 250px;
     grid-template-columns: 1fr 2fr;
-    grid-gap: 2em;
+    grid-gap: 0em;
   }
 }
 
 .inGrid {
-  composes: root;
+  display: block;
+  color: inherit;
+  text-decoration: none;
 }
 
 .leadMediaThumb {
+  grid-row-start: 2;
   position: relative;
   padding-bottom: 66.666%;
+  margin: 0;
   background: var(--color-very-light-gray);
 
   @nest & img {
@@ -37,12 +45,39 @@
 }
 
 .text {
-  /* empty */
+  color: black;
+  background: #f7f7f7;
+  padding: 1rem;
+  margin: 0;
+}
+
+.meta {
+  grid-column: span 2;
+  font-family: "Space Mono";
+  padding-bottom: 1rem;
+}
+
+.postInfo {
+  max-width: 36rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+
+  @media (--media-min-medium) {
+    font-size: 18px;
+  }
+}
+
+.author {
+  margin: 0;
+  padding: 0;
+  padding-right: 1rem;
 }
 
 .title {
   @media (hover: hover) {
-    @nest .root:hover & {
+    @nest .meta:hover & {
       text-decoration: underline;
     }
   }
@@ -56,7 +91,7 @@
 
 .excerpt {
   @nest & p {
-    margin: 0.5em 0;
+    margin: 0;
   }
 
   @nest & strong {
@@ -65,7 +100,5 @@
 }
 
 .date {
-  font-size: var(--font-small-size);
   line-height: var(--font-small-line-height);
-  color: var(--color-gray);
 }

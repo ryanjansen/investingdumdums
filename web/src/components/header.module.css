@@ -1,5 +1,5 @@
-@import '../styles/custom-media.css';
-@import '../styles/custom-properties.css';
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
 
 .root {
   position: relative;
@@ -9,7 +9,7 @@
 .wrapper {
   box-sizing: border-box;
   margin: 0 auto;
-  max-width: 960px;
+  max-width: 1120px;
   padding: 1em;
   display: flex;
 
@@ -58,6 +58,7 @@
 
 .nav {
   display: none;
+  font-family: "Space Mono";
 
   @nest & ul {
     margin: 0;
@@ -111,4 +112,8 @@
 
 .showNav {
   display: block;
+}
+
+.nav li {
+  padding-left: 1.4rem;
 }
