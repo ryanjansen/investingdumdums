@@ -21,7 +21,7 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 2em;
-  grid-row-gap: 2em;
+  grid-row-gap: 4em;
 }
 
 .browseMoreNav {

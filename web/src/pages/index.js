@@ -6,7 +6,7 @@ import {
   filterOutDocsPublishedInTheFuture,
 } from "../lib/helpers";
 import BlogPostPreviewList from "../components/blog-post-preview-list";
-import Container from "../components/container";
+import HomeContainer from "../components/homeContainer";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
@@ -93,7 +93,7 @@ const IndexPage = (props) => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Hero />
-      <Container>
+      <HomeContainer>
         {postNodes && (
           <BlogPostPreviewList
             title="Latest blog posts"
@@ -101,7 +101,7 @@ const IndexPage = (props) => {
             browseMoreHref="/archive/"
           />
         )}
-      </Container>
+      </HomeContainer>
     </Layout>
   );
 };

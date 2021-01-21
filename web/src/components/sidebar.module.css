@@ -1,0 +1,36 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.root {
+  text-align: center;
+  margin: 2rem;
+  padding: 3rem;
+  max-width: 80%;
+  min-width: 20rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.profile {
+  width: 70%;
+}
+
+.heading {
+  composes: responsiveTitle2 from "./typography.module.css";
+  color: var(--color-accent);
+}
+
+.paragraph {
+  composes: paragraph from "./typography.module.css";
+  font-size: 18px;
+}
+
+.topPostsList {
+  font-size: 20px;
+  font-family: "Space Mono";
+
+  @nest & li {
+    padding-bottom: 2rem;
+  }
+}

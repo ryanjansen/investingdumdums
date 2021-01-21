@@ -1,0 +1,24 @@
+@import "../styles/custom-media.css";
+
+.root {
+  display: grid;
+  background-image: url("../images//money.svg");
+  background-attachment: fixed;
+
+  grid-template-columns: 1fr;
+  @media (--media-min-large) {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.content {
+  max-width: 1200px;
+  padding: 1.5em;
+  padding-top: 0;
+  margin: 0 auto;
+
+  @media (--media-min-large) {
+    padding: 2em 0 0 3em;
+    margin: 0 0 0 2em;
+  }
+}
