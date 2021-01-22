@@ -2,6 +2,8 @@
 @import "../styles/custom-properties.css";
 
 .root {
+  background-image: url("../images//money.svg");
+  background-attachment: fixed;
 }
 
 .title {
@@ -12,7 +14,7 @@
   display: block;
   position: relative;
   background: var(--color-very-light-gray);
-  padding-bottom: calc(5 / 16 * 100%);
+  padding-bottom: calc(6 / 16 * 100%);
 
   @nest & img {
     display: block;
@@ -36,8 +38,12 @@
 }
 
 .mainContent {
+  background-color: #f7f7f7;
+  color: black;
+  padding: 2em;
+  border-radius: 5px;
   @nest & a {
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
 
     @media (hover: hover) {
       @nest &:hover {

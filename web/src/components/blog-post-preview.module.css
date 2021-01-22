@@ -15,7 +15,7 @@
 
   @media (--media-min-medium) {
     display: grid;
-    grid-template-rows: 1fr 250px;
+    grid-template-rows: 1fr 13rem;
     grid-template-columns: 1fr 2fr;
     grid-gap: 0em;
   }
@@ -45,7 +45,15 @@
 }
 
 .text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: 18px;
+  line-height: 27px;
   color: black;
+}
+
+.textHolder {
   background: #f7f7f7;
   padding: 1rem;
   margin: 0;
@@ -60,19 +68,19 @@
 .postInfo {
   max-width: 36rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  font-size: 10px;
+  font-size: 12px;
 
   @media (--media-min-medium) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 .author {
   margin: 0;
   padding: 0;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 
 .title {
@@ -90,6 +98,8 @@
 }
 
 .excerpt {
+  text-overflow: ellipsis;
+  color: black;
   @nest & p {
     margin: 0;
   }
@@ -97,8 +107,4 @@
   @nest & strong {
     font-weight: 600;
   }
-}
-
-.date {
-  line-height: var(--font-small-line-height);
 }

@@ -12,6 +12,7 @@ import calendar from "../images/calendar.svg";
 import comment from "../images/comment.svg";
 
 function BlogPostPreview(props) {
+  console.log(props);
   return (
     <Link
       className={props.isInList ? styles.inList : styles.inGrid}
@@ -21,13 +22,15 @@ function BlogPostPreview(props) {
         <h3 className={cn(responsiveTitle2, styles.title)}>{props.title}</h3>
 
         <div className={styles.postInfo}>
-          <p className={styles.author}>By Anthony Ng</p>
+          {props.authors.length !== 0 && (
+            <p className={styles.author}>By {props.authors[0]?.author.name}</p>
+          )}
           <div className={styles.date}>
             <img src={calendar} alt="calendaricon" /> {format(props.publishedAt, "MMMM Do, YYYY")}
           </div>
-          <div className={styles.comment}>
+          {/* <div className={styles.comment}>
             <img src={comment} alt="commenticon" /> 200 Comments
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -43,12 +46,14 @@ function BlogPostPreview(props) {
           />
         )}
       </div>
-      <div className={styles.text}>
-        {props._rawExcerpt && (
-          <div className={styles.excerpt}>
-            <PortableText blocks={props._rawExcerpt} />
-          </div>
-        )}
+      <div className={styles.textHolder}>
+        <div className={styles.text}>
+          {props._rawExcerpt && (
+            <div className={styles.excerpt}>
+              <PortableText blocks={props._rawExcerpt} />
+            </div>
+          )}
+        </div>
       </div>
     </Link>
   );

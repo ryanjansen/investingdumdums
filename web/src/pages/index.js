@@ -59,6 +59,11 @@ export const query = graphql`
           slug {
             current
           }
+          authors {
+            author {
+              name
+            }
+          }
         }
       }
     }

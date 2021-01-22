@@ -117,3 +117,9 @@
 .nav li {
   padding-left: 1.4rem;
 }
+
+.logo {
+  width: 200px;
+  padding: 0;
+  margin: 0;
+}

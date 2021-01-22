@@ -11,7 +11,7 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
     <div className={styles.wrapper}>
       <div className={styles.branding}>
         <Link to="/">
-          <img src={logo} alt="logo" />
+          <img className={styles.logo} src={logo} alt="logo" />
         </Link>
       </div>
 
