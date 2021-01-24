@@ -25,14 +25,14 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     {
       resolve: "gatsby-plugin-sharp",
       options: {
         base64Width: 20,
-        forceBase64Format: ``, // valid formats: png,jpg,webp
+        forceBase64Format: `png`, // valid formats: png,jpg,webp
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
         defaultQuality: 50,

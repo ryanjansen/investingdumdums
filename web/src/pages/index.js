@@ -67,11 +67,18 @@ export const query = graphql`
         }
       }
     }
+    heroImage: file(relativePath:{eq:"hero.png"}) {childImageSharp{
+      fluid(maxWidth:1240) {
+        ...GatsbyImageSharpFluid
+      }
+    }}
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
+
+  console.log(data);
 
   if (errors) {
     return (
@@ -97,7 +104,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Hero />
+      <Hero heroImage={data.heroImage}/>
       <HomeContainer>
         {postNodes && <BlogPostPreviewList nodes={postNodes} browseMoreHref="See All Posts" />}
       </HomeContainer>

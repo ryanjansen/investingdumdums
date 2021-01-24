@@ -95,9 +95,8 @@ const Posts = (props) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Hero />
       <HomeContainer>
-        <Pager pageContext={props.pageContext} />
+        {/* <Pager pageContext={props.pageContext} /> */}
         {postNodes && <BlogPostPreviewList nodes={postNodes} />}
         <Pager pageContext={props.pageContext} />
       </HomeContainer>

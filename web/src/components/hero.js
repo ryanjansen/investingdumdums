@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./hero.module.css";
+import Img from "gatsby-image";
 
-const Hero = () => {
+
+const Hero = ({heroImage}) => {
   return (
     <div className={styles.hero}>
+    <Img className={styles.heroImage} title="hero image" alt="Stock chart" fluid={heroImage.childImageSharp.fluid}/>
       <div className={styles.content}>
         <h1 className={styles.title}>Want to invest?</h1>
         <p className={styles.paragraph}>
