@@ -24,7 +24,7 @@ function BlogPostPreview(props) {
 
           <div className={styles.postInfo}>
             {props.authors?.length !== 0 && (
-              <p className={styles.author}>By {props.authors[0]?.author.name}</p>
+              <p className={styles.author}>By {props.authors?.[0].author.name}</p>
             )}
             <div className={styles.date}>
               <img src={calendar} alt="calendaricon" className={styles.calendar} />{" "}
