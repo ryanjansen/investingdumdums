@@ -46,7 +46,7 @@
   outline: none;
   color: inherit;
 
-  & svg {
+  @nest & svg {
     display: block;
     fill: inherit;
   }

@@ -75,8 +75,6 @@ export const query = graphql`
 const Posts = (props) => {
   const { data, errors } = props;
 
-  console.log(props);
-
   if (errors) {
     return (
       <Layout>

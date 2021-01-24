@@ -67,7 +67,7 @@ export const query = graphql`
         }
       }
     }
-    heroImage: file(relativePath:{eq:"hero.png"}) {childImageSharp{
+    heroImage: file(relativePath:{eq:"hero.jpg"}) {childImageSharp{
       fluid(maxWidth:1240) {
         ...GatsbyImageSharpFluid
       }
