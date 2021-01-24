@@ -99,11 +99,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
-  font-size: var(--font-base-size);
+  font-size: var(--font-small-size);
   line-height: var(--font-base-line-height);
-  line-clamp: 6;
+  line-clamp: 7;
   box-orient: vertical;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 7;
   -webkit-box-orient: vertical;
   color: black;
   display: -webkit-box;
@@ -133,7 +133,7 @@
 
   @media (--media-min-medium) {
     position: absolute;
-    right: 1rem;
-    bottom: 1rem;
+    right: 0.7rem;
+    bottom: 0.7rem;
   }
 }

@@ -42,7 +42,7 @@ export const query = graphql`
       keywords
     }
     posts: allSanityPost(
-      limit: 10
+      limit: 8
       sort: { fields: [publishedAt], order: DESC }
       filter: { slug: { current: { ne: null } }, publishedAt: { ne: null } }
     ) {
@@ -98,7 +98,9 @@ const IndexPage = (props) => {
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
       <Hero />
-      <HomeContainer>{postNodes && <BlogPostPreviewList nodes={postNodes} />}</HomeContainer>
+      <HomeContainer>
+        {postNodes && <BlogPostPreviewList nodes={postNodes} browseMoreHref="See All Posts" />}
+      </HomeContainer>
     </Layout>
   );
 };

@@ -15,6 +15,11 @@ function BlogPostPreviewGrid(props) {
             </li>
           ))}
       </ul>
+      {props.browseMoreHref && (
+        <Link to="/blog">
+          <button className={styles.browse}>{props.browseMoreHref}</button>
+        </Link>
+      )}
     </div>
   );
 }

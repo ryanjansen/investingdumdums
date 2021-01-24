@@ -23,7 +23,7 @@
   --unit: 16;
   --font-micro-size: calc(12 / var(--unit) * 1rem); /* 12px */
   --font-micro-line-height: calc(14 / 10); /* 14px */
-  --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
+  --font-small-size: calc(16 / var(--unit) * 1rem); /* 14px */
   --font-small-line-height: calc(25 / 14); /* 25px */
   --font-base-size: calc(18 / var(--unit) * 1rem); /* 18px */
   --font-base-line-height: calc(27 / var(--unit)); /* 24px */

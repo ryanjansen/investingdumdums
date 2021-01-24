@@ -12,7 +12,7 @@ const Sidebar = () => {
         Morbi quam hendrerit eu, massa tristique interdum sodales enim dui. Fermentum molestie diam
         sit lacinia fringilla nunc ac velit id. At egestas felis, porta morbi viverra a.
       </p>
-      <div className={styles.topPosts}>
+      {/* <div className={styles.topPosts}>
         <h3 className={styles.heading}>Top Posts</h3>
         <ol className={styles.topPostsList}>
           <li>Really Long Article Heading</li>
@@ -20,7 +20,7 @@ const Sidebar = () => {
           <li>Really Long Article Heading</li>
           <li>Really Long Article Heading</li>
         </ol>
-      </div>
+      </div> */}
     </div>
   );
 };

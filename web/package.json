@@ -38,6 +38,7 @@
   "dependencies": {
     "@fontsource/halant": "^4.1.0",
     "@fontsource/space-mono": "^4.1.0",
+    "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-image": "^2.0.41",
     "gatsby-plugin-sharp": "^2.13.1",
     "gatsby-source-filesystem": "^2.10.0",
