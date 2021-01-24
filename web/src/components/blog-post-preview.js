@@ -12,7 +12,7 @@ import calendar from "../images/calendar.svg";
 import comment from "../images/comment.svg";
 
 function BlogPostPreview(props) {
-  console.log(props);
+  
   return (
     <div className={styles.root}>
       <Link
