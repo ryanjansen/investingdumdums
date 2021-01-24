@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Space+Mono");
 @import url("https://fonts.googleapis.com/css?family=Halant");
 
+@font-face {
+  font-family: "Adelle";
+  src: url("../fonts/Adelle_Reg.otf");
+}
+
 :root {
-  --font-family-body: "Halant", sans-serif;
+  --font-family-body: "Adelle", Georgia, serif;
   --font-family-heading: "Space Mono", Mono;
 
   --color-black: #02010b;
@@ -21,7 +26,7 @@
   --font-small-size: calc(14 / var(--unit) * 1rem); /* 14px */
   --font-small-line-height: calc(25 / 14); /* 25px */
   --font-base-size: calc(18 / var(--unit) * 1rem); /* 18px */
-  --font-base-line-height: calc(24 / var(--unit)); /* 24px */
+  --font-base-line-height: calc(27 / var(--unit)); /* 24px */
   --font-large-size: calc(22 / var(--unit) * 1rem); /* 22px */
   --font-large-line-height: calc(32 / 18); /* 27px */
 

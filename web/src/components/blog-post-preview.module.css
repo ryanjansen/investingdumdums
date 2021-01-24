@@ -1,11 +1,20 @@
 @import "../styles/custom-media.css";
 @import "../styles/custom-properties.css";
 
-.root {
-  display: block;
-  color: inherit;
-  text-decoration: none;
-  margin-bottom: 5rem;
+.root:hover {
+  @nest & .meta .title {
+    text-decoration: underline;
+  }
+
+  @media (--media-min-medium) {
+    @nest & .leadMediaThumb {
+      transform: translateX(1rem);
+    }
+
+    @nest & .textHolder {
+      transform: translateX(1rem);
+    }
+  }
 }
 
 .inList {
@@ -15,7 +24,7 @@
 
   @media (--media-min-medium) {
     display: grid;
-    grid-template-rows: 1fr 13rem;
+    grid-template-rows: auto 15rem;
     grid-template-columns: 1fr 2fr;
     grid-gap: 0em;
   }
@@ -34,6 +43,8 @@
   margin: 0;
   background: var(--color-very-light-gray);
 
+  transition: all 0.2s;
+
   @nest & img {
     position: absolute;
     top: 0;
@@ -44,19 +55,12 @@
   }
 }
 
-.text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  width: 100%;
-  font-size: 18px;
-  line-height: 27px;
-  color: black;
-}
-
 .textHolder {
+  position: relative;
   background: #f7f7f7;
   padding: 1rem;
   margin: 0;
+  transition: all 0.2s;
 }
 
 .meta {
@@ -84,12 +88,6 @@
 }
 
 .title {
-  @media (hover: hover) {
-    @nest .meta:hover & {
-      text-decoration: underline;
-    }
-  }
-
   @media (--media-min-medium) {
     @nest .inList & {
       margin-top: 0;
@@ -98,6 +96,17 @@
 }
 
 .excerpt {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  font-size: var(--font-base-size);
+  line-height: var(--font-base-line-height);
+  line-clamp: 6;
+  box-orient: vertical;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  color: black;
+  display: -webkit-box;
   text-overflow: ellipsis;
   color: black;
   @nest & p {
@@ -106,5 +115,25 @@
 
   @nest & strong {
     font-weight: 600;
+  }
+}
+
+.calendar {
+  width: 1rem;
+  height: 1rem;
+}
+
+.continue {
+  font-size: 0.7rem;
+  color: var(--color-gray);
+  padding: 0;
+  margin: 0;
+  margin-top: 0.7rem;
+  text-align: right;
+
+  @media (--media-min-medium) {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
   }
 }
