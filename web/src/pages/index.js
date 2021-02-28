@@ -11,6 +11,7 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Hero from "../components/hero";
 import Layout from "../containers/layout";
+import Sidebar from "../components/sidebar"
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -78,7 +79,7 @@ export const query = graphql`
 const IndexPage = (props) => {
   const { data, errors } = props;
 
-  
+
 
   if (errors) {
     return (
@@ -91,8 +92,8 @@ const IndexPage = (props) => {
   const site = (data || {}).site;
   const postNodes = (data || {}).posts
     ? mapEdgesToNodes(data.posts)
-        .filter(filterOutDocsWithoutSlugs)
-        .filter(filterOutDocsPublishedInTheFuture)
+      .filter(filterOutDocsWithoutSlugs)
+      .filter(filterOutDocsPublishedInTheFuture)
     : [];
 
   if (!site) {
@@ -104,8 +105,8 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <Hero heroImage={data.heroImage}/>
-      <HomeContainer>
+      <Hero heroImage={data.heroImage} />
+      <HomeContainer Sidebar={Sidebar}>
         {postNodes && <BlogPostPreviewList nodes={postNodes} browseMoreHref="See All Posts" />}
       </HomeContainer>
     </Layout>

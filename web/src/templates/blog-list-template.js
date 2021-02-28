@@ -9,9 +9,9 @@ import BlogPostPreviewList from "../components/blog-post-preview-list";
 import HomeContainer from "../components/homeContainer";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
-import Hero from "../components/hero";
 import Layout from "../containers/layout";
 import Pager from "../components/pager";
+import Sidebar from "../components/sidebar";
 
 export const query = graphql`
   fragment SanityImage on SanityMainImage {
@@ -93,7 +93,7 @@ const Posts = (props) => {
   return (
     <Layout>
       <SEO title={site.title} description={site.description} keywords={site.keywords} />
-      <HomeContainer>
+      <HomeContainer Sidebar={Sidebar}>
         {/* <Pager pageContext={props.pageContext} /> */}
         {postNodes && <BlogPostPreviewList nodes={postNodes} />}
         <Pager pageContext={props.pageContext} />

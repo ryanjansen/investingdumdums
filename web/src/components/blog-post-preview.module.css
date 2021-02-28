@@ -130,6 +130,7 @@
   margin: 0;
   margin-top: 0.7rem;
   text-align: right;
+  text-decoration: none;
 
   @media (--media-min-medium) {
     position: absolute;

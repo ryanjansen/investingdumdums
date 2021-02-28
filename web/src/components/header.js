@@ -24,10 +24,10 @@ const Header = ({ onHideNav, onShowNav, showNav, siteTitle }) => (
           <li>
             <Link to="/blog">Blog</Link>
           </li>
-          {/* <li>
+          <li>
             <Link to="/about">About</Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/archive/">Contact</Link>
           </li> */}
         </ul>

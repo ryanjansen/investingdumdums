@@ -3,12 +3,13 @@
 
 .root {
   text-align: center;
-  margin: 2rem;
-  padding: 3rem;
-  max-width: 20rem;
+  margin: 2rem auto;
+  padding: 4rem;
+  max-width: 25rem;
 
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -19,11 +20,14 @@
 .heading {
   composes: responsiveTitle2 from "./typography.module.css";
   color: var(--color-accent);
+  text-decoration: none;
 }
 
 .paragraph {
   composes: paragraph from "./typography.module.css";
   font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 
 .topPostsList {
@@ -33,4 +37,8 @@
   @nest & li {
     padding-bottom: 2rem;
   }
+}
+
+.link {
+  text-decoration: none;
 }
