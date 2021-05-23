@@ -1,18 +1,18 @@
 import React from "react";
 import Layout from "../containers/layout";
-import AboutContainer from "../components/aboutContainer";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
+import styles from "./about.module.css";
 
 const AboutPage = ({ data }) => {
   return (
     <Layout>
-      <AboutContainer>
+      <div className={styles.container}>
         <div>
           <Img fixed={data.file.childImageSharp.fixed} />
         </div>
-        <div>
-          <h1>About Me</h1>
+        <div className={styles.content}>
+          <h1 className="text-primary">About Me</h1>
           <p>
             Much delayed with ORD and CNY but we are finally here, to begin this burning passion of
             mine, my own personal quest to solving the money problem for myself and others.
@@ -34,7 +34,7 @@ const AboutPage = ({ data }) => {
             worries in the future.
           </p>
         </div>
-      </AboutContainer>
+      </div>
     </Layout>
   );
 };

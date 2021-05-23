@@ -30,9 +30,6 @@ function BlogPostPreview(props) {
               <img src={calendar} alt="calendaricon" className={styles.calendar} />{" "}
               {format(props.publishedAt, "MMMM Do, YYYY")}
             </div>
-            {/* <div className={styles.comment}>
-            <img src={comment} alt="commenticon" /> 200 Comments
-          </div> */}
           </div>
         </div>
 

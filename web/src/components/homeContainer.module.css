@@ -2,10 +2,7 @@
 
 .root {
   display: grid;
-  background-image: url("../images//money.svg");
-  background-attachment: fixed;
-
-  grid-template-columns: 1fr;
+   grid-template-columns: 1fr;
   @media (--media-min-large) {
     grid-template-columns: 2fr 25rem;
   }

@@ -2,6 +2,9 @@
 @import "../styles/custom-properties.css";
 
 .content {
+  background-image: url("../images/money.svg");
+  background-attachment: fixed;
+
   min-height: calc(100% - 73px - 120px);
 
   @media (--media-min-small) {

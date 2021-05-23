@@ -2,14 +2,12 @@
 @import "../styles/custom-properties.css";
 
 .root {
-  text-align: center;
-  margin: 2rem auto;
-  padding: 4rem;
+  margin: 0 auto;
+  padding: 0 3rem;
   max-width: 25rem;
-
+  text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 

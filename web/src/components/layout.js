@@ -10,7 +10,7 @@ const Layout = ({ children, onHideNav, onShowNav, showNav, siteTitle }) => (
     <div className={styles.content}>{children}</div>
     <footer className={styles.footer}>
       <div className={styles.footerWrapper}>
-        <div className={styles.siteInfo}>&copy; {new Date().getFullYear()}, Anothony Ng</div>
+        <div className={styles.siteInfo}>&copy; {new Date().getFullYear()}, Anthony Ng</div>
       </div>
     </footer>
   </>

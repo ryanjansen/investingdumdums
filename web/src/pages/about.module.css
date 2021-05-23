@@ -1,0 +1,21 @@
+@import "../styles/custom-media.css";
+@import "../styles/custom-properties.css";
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 2rem;
+
+  @media (max-width: 983px) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+}
+
+.content {
+  margin-left: 40px;
+  @media (max-width: 983px) {
+    margin: 0;
+  }
+}

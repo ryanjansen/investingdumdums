@@ -2,20 +2,28 @@ import React from "react";
 import styles from "./hero.module.css";
 import Img from "gatsby-image";
 
-
-const Hero = ({heroImage}) => {
+const Hero = ({ heroImage }) => {
   return (
     <div className={styles.hero}>
-    <Img className={styles.heroImage} title="hero image" alt="Stock chart" fluid={heroImage.childImageSharp.fluid}/>
+      <Img
+        className={styles.heroImage}
+        title="hero image"
+        alt="Stock chart"
+        fluid={heroImage.childImageSharp.fluid}
+      />
       <div className={styles.content}>
         <h1 className={styles.title}>Want to invest?</h1>
         <p className={styles.paragraph}>
-          {`There's no better time to learn than now.
-          Start now and lose all your money!`}
+          Trial my Investing Course! It covers the basics and will teach you how to evaluate a stock
+          and build a strong portfolio to provide you outsized returns.
         </p>
-        <button href="#" className={styles.btn}>
-          Get Started
-        </button>
+        <a
+          href="https://calendly.com/investingdumdums/investing-basics"
+          alt="Investing Basics Booking"
+          target="_blank"
+        >
+          <button className={styles.btn}>Get Started</button>
+        </a>
       </div>
     </div>
   );
